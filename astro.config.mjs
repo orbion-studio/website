@@ -5,10 +5,24 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), sitemap()],
   site: "https://orbion.studio/",
+  compressHTML: true,
+  integrations: [
+    react(),
+    sitemap(),
+  ],
   vite: {
-    plugins: [tailwindcss()],
+    build: {
+      minify: true,
+      cssMinify: "lightningcss",
+    },
+    plugins: [
+      tailwindcss({
+        optimize: {
+          minify: true,
+        }
+      })
+    ],
   },
   devToolbar: {
     enabled: false,

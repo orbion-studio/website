@@ -12,7 +12,6 @@ export function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <h1
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight tracking-tight animate-fade-in-up"
-          style={{ animationDelay: "0.2s", opacity: 0 }}
         >
           Sofisticação através da{" "}
           <span className="bg-linear-to-r from-electric-blue to-violet-500 bg-clip-text text-transparent">
@@ -23,7 +22,7 @@ export function Hero() {
 
         <p
           className="text-lg md:text-xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up"
-          style={{ animationDelay: "0.4s", opacity: 0 }}
+          style={{ animationDelay: "0.3s", animationFillMode: "backwards" }}
         >
           Eliminamos o excesso para revelar a essência. Design estratégico projetado para clareza máxima e conversão de
           alto valor.
@@ -31,7 +30,7 @@ export function Hero() {
 
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up"
-          style={{ animationDelay: "0.6s", opacity: 0 }}
+          style={{ animationDelay: "0.5s", animationFillMode: "backwards" }}
         >
           <a
             href="#contato"

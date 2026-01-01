@@ -2,9 +2,9 @@
 
 @theme {
   /* Cores */
-  --color-obsidian: #0A0A0B;
-  --color-snow: #FAFAFA;
-  --color-electric-blue: #2563EB;
+  --color-obsidian: #0a0a0b;
+  --color-snow: #fafafa;
+  --color-electric-blue: #2563eb;
 
   /* Fontes */
   --font-righteous: "Righteous", cursive;
@@ -22,7 +22,6 @@
 
   /* Keyframes agora são definidos como CSS padrão dentro do tema */
   @keyframes float {
-
     0%,
     100% {
       transform: translateY(0px) scale(1);
@@ -34,7 +33,6 @@
   }
 
   @keyframes pulse-glow {
-
     0%,
     100% {
       opacity: 0.4;
@@ -83,7 +81,7 @@
 
   /* Grain texture overlay */
   body::before {
-    content: '';
+    content: "";
     position: fixed;
     top: 0;
     left: 0;
