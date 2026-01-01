@@ -3,30 +3,79 @@ import "@/styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=Righteous&display=swap"
-			rel="stylesheet"
-		/>
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Basic SEO -->
+    <meta
+      name="title"
+      content="Orbion Studio - Desenvolvimento de Software e Web Design"
+    />
+    <meta
+      name="description"
+      content="A Orbion Studio é especializada em desenvolvimento de software sob demanda e web design. Criamos soluções inovadoras e escaláveis para suas necessidades. Vamos conversar sobre como podemos ajudar seu negócio a crescer. Entre em contato!"
+    />
+    <meta
+      name="keywords"
+      content="desenvolvimento de software, web design, soluções digitais, sistemas personalizados, sites profissionais, Orbion Studio, software sob demanda, tecnologia, programação, aplicações web"
+    />
+    <meta name="author" content="Orbion Studio" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="pt-BR" />
+    <meta
+      name="google-site-verification"
+      content="xYT4F7oNrBadWBXZ2EfInig5ePhIaiLTTWKKRoRbrZ4"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://orbion.studio/" />
+    <meta
+      property="og:title"
+      content="Orbion Studio - Desenvolvimento de Software e Web Design"
+    />
+    <meta
+      property="og:description"
+      content="Soluções digitais sob medida: desenvolvimento de software, web design e inovação para impulsionar seu negócio."
+    />
+    <!-- <meta property="og:image" content="https://orbion.studio/images/og-image.jpg" /> -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://orbion.studio/" />
+    <meta
+      name="twitter:title"
+      content="Orbion Studio - Desenvolvimento de Software e Web Design"
+    />
+    <meta
+      name="twitter:description"
+      content="Desenvolvemos sistemas e sites personalizados com foco em inovação, performance e escalabilidade."
+    />
+    <!-- <meta name="twitter:image" content="https://orbion.studio/images/og-image.jpg" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <title>Orbion Studio - Desenvolvimento de Software e Web Design</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
