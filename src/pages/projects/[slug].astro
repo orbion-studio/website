@@ -1,0 +1,65 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import { projects } from "@/texts/home/projects";
+
+import { BackButton } from "@/sections/project/components/back-button";
+import { Hero } from "@/sections/project/hero";
+import { Context } from "@/sections/project/context";
+import { Results } from "@/sections/project/results";
+import { NextProject } from "@/sections/project/components/next-project";
+import { DesktopMockup } from "@/components/desktop-mockup";
+import { MobileMockup } from "@/components/mobile-mockup";
+
+// Gera as rotas estáticas para cada projeto
+export async function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+// Pega os dados do projeto atual e calcula o próximo
+const { project } = Astro.props;
+const currentIndex = projects.findIndex((p) => p.slug === project.slug);
+const nextProject = projects[(currentIndex + 1) % projects.length];
+
+if (!project) {
+  return Astro.redirect("/404");
+}
+---
+
+<Layout title={project.title}>
+  <div
+    class="min-h-screen bg-obsidian text-snow selection:bg-electric-blue selection:text-white"
+  >
+    <BackButton client:load />
+    <Hero project={project} client:load />
+    <Context
+      challenge={project.challenge}
+      solution={project.solution}
+      client:visible
+    />
+
+    <div class="relative w-full">
+      <div class="hidden md:block">
+        <DesktopMockup
+          websiteImage={project.mockupImage}
+          alt={`Desktop design - ${project.title}`}
+          client:visible
+        />
+      </div>
+
+      <div class="block md:hidden">
+        <MobileMockup
+          mobileImage={project.mockupMobileImage || project.mockupImage}
+          alt={`Mobile design - ${project.title}`}
+          client:visible
+        />
+      </div>
+    </div>
+
+    <!-- <Results metrics={project.metrics} client:visible /> -->
+    <NextProject nextProject={nextProject} client:visible />
+  </div>
+</Layout>
