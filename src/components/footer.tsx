@@ -19,7 +19,7 @@ export function Footer() {
 
           <div className="flex items-center gap-6">
             <a
-              href="mailto:contato@orbionstudio.com"
+              href="mailto:contato@orbion.studio"
               className="flex items-center gap-2 text-slate-400 hover:text-snow transition-colors duration-300"
             >
               <Mail className="w-5 h-5" />
