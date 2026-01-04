@@ -26,7 +26,7 @@ export function Footer() {
               <span className="text-sm font-medium">Email</span>
             </a>
             <a
-              href="https://linkedin.com/company/orbionstudio"
+              href="https://linkedin.com/company/orbion-studio"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-slate-400 hover:text-snow transition-colors duration-300"
